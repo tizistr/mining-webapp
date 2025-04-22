@@ -1,4 +1,7 @@
 April 22, 2025:
+- Cleared conflicting files in mining-webapp.
+- Created Next.js app: npx create-next-app@latest .
+- Tested at http://localhost:3000.April 22, 2025:
 - Configured VS Code: auto-save, format-on-save.
 - Organized macOS: Desktop Stacks, VS Code/Terminal in Dock.April 22, 2025:
 - Verified .gitignore in mining-webapp.
