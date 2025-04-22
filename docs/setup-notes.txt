@@ -1,4 +1,7 @@
 April 22, 2025:
+- Tested mining-webapp Next.js app at http://localhost:3000.April 22, 2025:
+- Added roster dashboard to mining-webapp (app/page.tsx).
+- Pushed to GitHub.April 22, 2025:
 - Initialized Git and pushed to https://github.com/tizistr/mining-webapp.April 22, 2025:
 - Cleared conflicting files in mining-webapp.
 - Created Next.js app: npx create-next-app@latest .
