@@ -25,16 +25,16 @@ export default function Home() {
 
   return (
     <main
-      className={`flex-1 p-4 sm:p-6 bg-white/30 backdrop-blur-sm ${
-        isDarkMode ? 'bg-gradient-to-b from-slate-800 to-slate-900 text-gray-200' : 'bg-gradient-to-b from-amber-100 to-amber-300 text-gray-800'
-      }`}
+      className={`flex-1 p-4 sm:p-6 bg-[#FFFFF4]/80 backdrop-blur-md ${
+        isDarkMode ? 'bg-gradient-to-b from-slate-800 to-slate-900 text-[#191970]' : 'bg-gradient-to-b from-amber-100 to-amber-300 text-[#191970]'
+      } font-bold`}
     >
       <div className="flex flex-col sm:flex-row justify-end items-start sm:items-center mb-4">
         <button
           onClick={() => setIsDarkMode(!isDarkMode)}
-          className="mt-2 sm:mt-0 p-2 rounded hover:bg-gray-200 transition-colors duration-200"
+          className="mt-2 sm:mt-0 p-2 rounded hover:bg-[#191970]/20 transition-all duration-200"
         >
-          {isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
+          {isDarkMode ? 'Light Mode' : 'Dark Mode'}
         </button>
       </div>
 
@@ -44,15 +44,15 @@ export default function Home() {
 
       <ul className="mt-4 sm:mt-6 space-y-2">
         {rosters.length === 0 ? (
-          <li className="p-2 rounded shadow bg-white text-gray-800">
+          <li className="p-2 rounded bg-[#FFFFF4]">
             No roster data available.
           </li>
         ) : (
           rosters.map((roster) => (
             <li
               key={roster.id}
-              className={`p-2 rounded shadow ${
-                isDarkMode ? 'bg-gray-700 text-gray-200' : 'bg-white text-gray-800'
+              className={`p-2 rounded ${
+                isDarkMode ? 'bg-gray-700' : 'bg-[#FFFFF4]'
               }`}
             >
               {roster.role}: {roster.name} - Shift: {roster.shift} - Site: {roster.site}

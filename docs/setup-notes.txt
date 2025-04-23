@@ -1,4 +1,6 @@
 April 23, 2025:
+- Fixed missing app/page.tsx, updated dashboard name to re-sort, added top header with search, updated sidebar to expand on hover.
+- Pushed to GitHub.April 23, 2025:
 - Fixed Supabase integration for roster data, refined UI across pages.
 - Pushed to GitHub.April 23, 2025:
 - Fixed Tailwind setup in postcss.config.mjs and resolved BuildError in Sidebar.
