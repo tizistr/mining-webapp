@@ -1,4 +1,6 @@
 import { JetBrains_Mono } from 'next/font/google';
+import Sidebar from '../components/Sidebar';
+import './globals.css';
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ['latin'],
@@ -12,7 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={jetBrainsMono.className}>{children}</body>
+      <body className={jetBrainsMono.className}>
+        <div className="flex">
+          <Sidebar />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
