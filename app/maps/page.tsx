@@ -11,8 +11,7 @@ export default function Maps() {
         isDarkMode ? 'bg-gradient-to-b from-slate-800 to-slate-900 text-gray-200' : 'bg-gradient-to-b from-amber-100 to-amber-300 text-gray-800'
       }`}
     >
-      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6">
-        <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">FieldPulse: 3D Maps</h1>
+      <div className="flex flex-col sm:flex-row justify-end items-start sm:items-center mb-6">
         <button
           onClick={() => setIsDarkMode(!isDarkMode)}
           className="mt-2 sm:mt-0 p-2 rounded-full hover:bg-gray-200 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500"

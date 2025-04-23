@@ -1,4 +1,6 @@
 April 23, 2025:
+- Fixed Supabase integration for roster data, refined UI across pages.
+- Pushed to GitHub.April 23, 2025:
 - Fixed Tailwind setup in postcss.config.mjs and resolved BuildError in Sidebar.
 - Pushed to GitHub.April 22, 2025:
 - Updated roster page with sidebar, JetBrains Mono, and milky see-through design.

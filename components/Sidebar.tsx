@@ -5,33 +5,21 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 export default function Sidebar() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const pathname = usePathname();
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen((prev) => !prev);
-  };
-
-  useEffect(() => {
-    document.body.style.overflow = isSidebarOpen ? 'auto' : 'hidden';
-  }, [isSidebarOpen]);
 
   return (
     <aside
       className={`${
-        isSidebarOpen ? 'w-full md:w-1/5' : 'w-16'
-      } p-4 bg-white/30 backdrop-blur-sm transition-all duration-300 ease-in-out min-h-[200px] md:min-h-screen shadow-lg`}
+        isSidebarOpen ? 'w-36' : 'w-12'
+      } p-4 bg-white/30 backdrop-blur-sm transition-all duration-300 ease-in-out min-h-[200px] md:min-h-screen shadow-lg group`}
+      onMouseEnter={() => setIsSidebarOpen(true)}
+      onMouseLeave={() => setIsSidebarOpen(false)}
     >
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center mb-6">
         {isSidebarOpen && (
-          <h2 className="text-2xl font-bold text-gray-800 tracking-wide">FieldPulse</h2>
+          <h2 className="text-2xl font-bold text-gray-800 tracking-wide">re-sort</h2>
         )}
-        <button
-          onClick={toggleSidebar}
-          className="p-2 rounded-full hover:bg-gray-200 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-amber-500"
-        >
-          {isSidebarOpen ? '☰' : '➔'}
-        </button>
       </div>
 
       <nav className="space-y-3">
