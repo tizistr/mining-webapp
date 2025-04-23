@@ -1,4 +1,6 @@
-April 22, 2025:
+April 23, 2025:
+- Fixed Tailwind setup in postcss.config.mjs and resolved BuildError in Sidebar.
+- Pushed to GitHub.April 22, 2025:
 - Updated roster page with sidebar, JetBrains Mono, and milky see-through design.
 - Pushed to GitHub.April 22, 2025:
 - Tested mining-webapp Next.js app at http://localhost:3000.April 22, 2025:

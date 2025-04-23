@@ -15,9 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={jetBrainsMono.className}>
-        <div className="flex">
+        <div className="flex min-h-screen">
           <Sidebar />
-          {children}
+          <div className="flex-1">{children}</div>
         </div>
       </body>
     </html>
