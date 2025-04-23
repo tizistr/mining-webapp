@@ -1,4 +1,8 @@
 April 23, 2025:
+- Focused on roster page as a template, applied design updates, fixed MacBook lag concerns.
+- Pushed to GitHub.April 23, 2025:
+- Updated page color to #FFFFF4, fixed dark mode text, removed sidebar re-sort, removed icons, made text bold in JetBrains Mono, fixed sidebar hover, added frosty overlay, refined button and search bar styles.
+- Pushed to GitHub.April 23, 2025:
 - Fixed missing app/page.tsx, updated dashboard name to re-sort, added top header with search, updated sidebar to expand on hover.
 - Pushed to GitHub.April 23, 2025:
 - Fixed Supabase integration for roster data, refined UI across pages.

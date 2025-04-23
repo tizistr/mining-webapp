@@ -24,15 +24,11 @@ export default function Home() {
   }, []);
 
   return (
-    <main
-      className={`flex-1 p-4 sm:p-6 bg-[#FFFFF4]/80 backdrop-blur-md ${
-        isDarkMode ? 'bg-gradient-to-b from-slate-800 to-slate-900 text-[#191970]' : 'bg-gradient-to-b from-amber-100 to-amber-300 text-[#191970]'
-      } font-bold`}
-    >
+    <main className="flex-1 p-4 sm:p-6 bg-[#FFFFF4]/80 backdrop-blur-md">
       <div className="flex flex-col sm:flex-row justify-end items-start sm:items-center mb-4">
         <button
           onClick={() => setIsDarkMode(!isDarkMode)}
-          className="mt-2 sm:mt-0 p-2 rounded hover:bg-[#191970]/20 transition-all duration-200"
+          className="mt-2 sm:mt-0 p-2 rounded transition-all duration-200 hover:text-[#191970] hover:text-shadow-[0_0_8px_rgba(25,25,112,0.8)]"
         >
           {isDarkMode ? 'Light Mode' : 'Dark Mode'}
         </button>
@@ -52,7 +48,7 @@ export default function Home() {
             <li
               key={roster.id}
               className={`p-2 rounded ${
-                isDarkMode ? 'bg-gray-700' : 'bg-[#FFFFF4]'
+                isDarkMode ? 'bg-gray-700 text-[#191970]' : 'bg-[#FFFFF4]'
               }`}
             >
               {roster.role}: {roster.name} - Shift: {roster.shift} - Site: {roster.site}
