@@ -3,6 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { JetBrains_Mono } from "next/font/google";
+
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+});
 
 export default function Sidebar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -16,39 +22,39 @@ export default function Sidebar() {
       onMouseEnter={() => setIsSidebarOpen(true)}
       onMouseLeave={() => setIsSidebarOpen(false)}
     >
-      <nav className="space-y-1 mt-4">
+      <nav className="space-y-4 mt-6">
         <Link
           href="/"
-          className={`block p-2 transition-all duration-200 hover:text-[#191970] hover:text-shadow-[0_0_8px_rgba(25,25,112,0.8)] no-underline font-bold transform hover:scale-105 ${
+          className={`block p-2 transition-all duration-200 hover:text-[#191970] hover:text-shadow-[0_0_8px_rgba(25,25,112,0.8)] no-underline font-bold text-xl ${
             pathname === "/" ? "bg-[#191970]/10" : ""
           }`}
         >
-          <span className="text-sm">Rosters</span>
+          <span className="">Rosters</span>
         </Link>
         <Link
           href="/timesheets"
-          className={`block p-2 transition-all duration-200 hover:text-[#191970] hover:text-shadow-[0_0_8px_rgba(25,25,112,0.8)] no-underline font-bold transform hover:scale-105 ${
+          className={`block p-2 transition-all duration-200 hover:text-[#191970] hover:text-shadow-[0_0_8px_rgba(25,25,112,0.8)] no-underline font-bold text-xl ${
             pathname === "/timesheets" ? "bg-[#191970]/10" : ""
           }`}
         >
-          <span className="text-sm">Timesheets</span>
+          <span className="">Timesheets</span>
         </Link>
         <Link
           href="/maps"
-          className={`block p-2 transition-all duration-200 hover:text-[#191970] hover:text-shadow-[0_0_8px_rgba(25,25,112,0.8)] no-underline font-bold transform hover:scale-105 ${
+          className={`block p-2 transition-all duration-200 hover:text-[#191970] hover:text-shadow-[0_0_8px_rgba(25,25,112,0.8)] no-underline font-bold text-xl ${
             pathname === "/maps" ? "bg-[#191970]/10" : ""
           }`}
         >
-          <span className="text-sm">3D Maps</span>
+          <span className="">3D Maps</span>
         </Link>
       </nav>
 
       {isSidebarOpen && (
-        <div className="mt-4">
+        <div className="mt-6">
           <input
             type="text"
             placeholder="Search workers..."
-            className="w-full p-1 bg-[#FFFFF4] placeholder-[#191970]/50 focus:outline-none transition-all duration-200 border-none font-jetbrains font-bold text-sm"
+            className={`${jetBrainsMono.className} w-full p-1 bg-[#FFFFF4] placeholder-[#191970] focus:outline-none transition-all duration-200 border-none font-bold text-lg hover:text-shadow-[0_0_8px_rgba(25,25,112,0.8)]`}
           />
         </div>
       )}

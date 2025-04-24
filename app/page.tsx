@@ -24,32 +24,21 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex-1 p-2 bg-[#FFFFF4]/80 backdrop-blur-md no-underline">
-      <div className="flex flex-col sm:flex-row justify-end items-start sm:items-center mb-2">
-        <button
-          onClick={() => setIsDarkMode(!isDarkMode)}
-          className="mt-1 sm:mt-0 p-1 transition-all duration-200 hover:text-[#191970] hover:text-shadow-[0_0_8px_rgba(25,25,112,0.8)] no-underline border-none font-bold bg-transparent transform hover:scale-105 text-sm"
-        >
-          {isDarkMode ? "Light Mode" : "Dark Mode"}
-        </button>
-      </div>
-
-      <p className="mt-1 text-xs font-bold">
+    <main className={`flex-1 p-2 ${isDarkMode ? "bg-gray-800 text-[#191970]" : "bg-[#FFFFF4]/80 text-[#191970]"} backdrop-blur-md no-underline`}>
+      <p className="mt-1 text-lg font-bold">
         Manage your mining team’s shifts and sites.
       </p>
 
       <ul className="mt-2 space-y-1">
         {rosters.length === 0 ? (
-          <li className="p-1 bg-[#FFFFF4] font-bold text-xs">
+          <li className={`p-1 ${isDarkMode ? "bg-gray-700" : "bg-[#FFFFF4]"} font-bold text-lg`}>
             No roster data available.
           </li>
         ) : (
           rosters.map((roster) => (
             <li
               key={roster.id}
-              className={`p-1 ${
-                isDarkMode ? "bg-gray-700 text-[#191970]" : "bg-[#FFFFF4]"
-              } font-bold text-xs transition-all duration-200 hover:bg-[#191970]/10`}
+              className={`p-1 ${isDarkMode ? "bg-gray-700" : "bg-[#FFFFF4]"} font-bold text-lg transition-all duration-200 hover:bg-[#191970]/10 hover:text-shadow-[0_0_8px_rgba(25,25,112,0.8)]`}
             >
               {roster.role}: {roster.name} - Shift: {roster.shift} - Site: {roster.site}
             </li>
